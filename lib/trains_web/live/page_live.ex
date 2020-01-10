@@ -18,7 +18,6 @@ defmodule TrainsWeb.PageLive do
     {:ok, assign(socket, change: change)}
   end
 
-  @spec handle_event(<<_::72>>, any, Phoenix.LiveView.Socket.t()) :: {:noreply, any}
   def handle_event("decrement", _event, socket) do
     change = Change.decrement()
     Endpoint.broadcast_from!(self(), "change", "update", %{change: change})
