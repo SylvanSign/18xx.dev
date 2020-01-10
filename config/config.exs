@@ -12,7 +12,10 @@ config :trains, TrainsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "ZI0z3Xw6+AV4zIho+JjuFJM5KDrkOabEoUL4BRQ6mpiRSJQ3G1Yyg+eWXxt80uM2",
   render_errors: [view: TrainsWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Trains.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Trains.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view: [
+    signing_salt: "FbdhDxgqcfM/YPToA51vkFQYMUaN6BFv"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
