@@ -9,9 +9,10 @@ defmodule Trains.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      TrainsWeb.Endpoint
+      TrainsWeb.Endpoint,
       # Starts a worker by calling: Trains.Worker.start_link(arg)
       # {Trains.Worker, arg},
+      Trains.Change
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
