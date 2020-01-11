@@ -13,8 +13,12 @@ defmodule TrainsWeb.PageLive do
   end
 
   def mount(_, socket) do
+    if connected?(socket) do
+      Endpoint.subscribe("change")
+    end
+
     change = Change.state()
-    Endpoint.subscribe("change")
+
     {:ok, assign(socket, change: change)}
   end
 

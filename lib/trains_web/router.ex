@@ -18,6 +18,7 @@ defmodule TrainsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/tile", TileLive
   end
 
   # Other scopes may use custom stacks.

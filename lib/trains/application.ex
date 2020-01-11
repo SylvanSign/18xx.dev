@@ -12,7 +12,8 @@ defmodule Trains.Application do
       TrainsWeb.Endpoint,
       # Starts a worker by calling: Trains.Worker.start_link(arg)
       # {Trains.Worker, arg},
-      Trains.Change
+      Trains.Change,
+      Trains.TileState
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
