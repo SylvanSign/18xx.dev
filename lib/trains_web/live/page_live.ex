@@ -7,8 +7,8 @@ defmodule TrainsWeb.PageLive do
   def render(assigns) do
     ~L"""
     <p>Movement Speed Change: <%= @change %></p>
-    <button phx-click="decrement" phx-throttle="500">-</button>
-    <button phx-click="increment" phx-throttle="500">+</button>
+    <button phx-click="decrement" phx-throttle="100">-</button>
+    <button phx-click="increment" phx-throttle="100">+</button>
     """
   end
 
