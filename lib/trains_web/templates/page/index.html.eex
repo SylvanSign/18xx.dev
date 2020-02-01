@@ -2,6 +2,8 @@
   width="<%= @width %>"
   height="<%= @height %>"
   viewBox="<%= @viewBox %>"
-  xmlns="http://www.w3.org/2000/svg">
-  <%= render "divide.html", assigns %>
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect fill="grey" x="-1000" y="-1000" width="2000" height="2000"></rect>
+  <%= render "map.html", assigns %>
 </svg>
